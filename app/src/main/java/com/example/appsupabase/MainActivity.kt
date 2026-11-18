@@ -13,6 +13,7 @@ import com.example.appsupabase.data.SupabaseManager
 import com.example.appsupabase.models.Alumno
 import com.example.appsupabase.utils.SupabaseErrorHandler
 import io.github.jan.supabase.postgrest.from
+import io.github.jan.supabase.postgrest.query.Order
 import kotlinx.coroutines.launch
 
 class MainActivity : AppCompatActivity() {
@@ -45,7 +46,9 @@ class MainActivity : AppCompatActivity() {
                 etResultados.setText("Cargando alumnos...")
                 val listaAlumnos = SupabaseManager.client
                     .from("alumnos")
-                    .select()
+                    .select {
+                        order("nombres", order = Order.ASCENDING)
+                    }
                     .decodeList<Alumno>()
 
                 if (listaAlumnos.isEmpty()) {
