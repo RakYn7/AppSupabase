@@ -23,7 +23,7 @@ Entre las funcionalidades implementadas destacan:
 
 ## 📸 Capturas de la Aplicación
 
-| Pantalla Principal / Carga | Lista Ordenada Alfabéticamente (A-Z) |
+| Código / Interfaz | Lista Ordenada Alfabéticamente (A-Z) |
 | :---: | :---: |
 | ![Captura 1](captura1.png) | ![Captura 2](captura2.png) |
 
